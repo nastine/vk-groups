@@ -4,7 +4,6 @@ import time
 
 if __name__ == "__main__":
     schedule.every().day.at("10:30").do(write_to_db)
-    schedule.every().minute.at(":17").do(write_to_db)
     while True:
         schedule.run_pending()
         time.sleep(1)
